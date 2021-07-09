@@ -2,9 +2,12 @@
 
 import React, { useState, useEffect } from 'react'
 
+
+
 const useFetch = (url: string) => {
 
-    const [result, setResult] = useState({})
+    const [result, setResult] = useState()
+    const [active, setLoading] = useState<Boolean>(true)
 
     useEffect(() => {
 
@@ -18,6 +21,8 @@ const useFetch = (url: string) => {
 
                 setResult(datajson)
 
+                setLoading(false)
+
             } catch (error) {
                 setResult(error)
             }
@@ -30,7 +35,7 @@ const useFetch = (url: string) => {
 
     }, [url])
 
-return [result]
+    return [result]
 
 }
 

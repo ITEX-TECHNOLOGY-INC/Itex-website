@@ -1,5 +1,6 @@
 {
   "name": "itex-website",
+  "homepage": "https://itex-technology-inc.github.io/itex-website/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,9 +11,11 @@
     "@types/node": "^12.20.15",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.7",
+    "@types/react-router-dom": "^5.1.7",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.3.4",
     "web-vitals": "^1.1.2"
@@ -20,9 +23,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "npx eslint ./",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,9 +47,6 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
-    "@typescript-eslint/parser": "^4.27.0",
-    "eslint": "^7.28.0",
-    "eslint-plugin-react": "^7.24.0"
+    "gh-pages": "^3.2.3"
   }
 }
