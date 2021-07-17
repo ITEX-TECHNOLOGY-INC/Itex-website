@@ -1,6 +1,6 @@
 {
   "name": "itex-website",
-  "homepage": "https://itex-technology-inc.github.io/itex-website/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

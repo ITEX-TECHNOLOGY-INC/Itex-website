@@ -1,6 +1,6 @@
 import Body from '../semantic-components/Body'
 import Header from '../semantic-components/Header';
-import Footer from '../composable-components/Footer';
+import Footer from '../semantic-components/Footer'
 const Page = () => {
   return (
     <>

@@ -1,19 +1,26 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 type navProps = {
-  nav: Array<string>;
+  nav: Array<any>;
 };
 
-const Navbar = ({ nav }: navProps) => {
+
+const Navbar = ({ nav = [{"text":"Services","link":"/services"}, {"text":"Careers","link":"/careers"}, {"text":"Contact Us","link":"/contact"}] }: navProps) => {
   return (
-    <div>
-      {nav.map((m: string) => {
-        return m;
-      })}
+    <div className="navbar">
+    <div className="leftnavbar"><Link to='/'>Itex</Link></div>
+    <div className="rightnavbar">
+<ul>
+  {
+    nav.map((m)=>{
+return <li><Link to={m.link}>{m.text}</Link></li>
+    })
+  }
+</ul>
     </div>
+  </div>
   );
 };
 
-Navbar.defaultProps = {
-  nav: ['Home', 'About', 'Contact Us']};
 export default Navbar;

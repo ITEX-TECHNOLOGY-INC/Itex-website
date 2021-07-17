@@ -4,7 +4,7 @@ import Navbar from "../composable-components/Navbar";
 const Header = () => {
   return (
     <div className="header">
-      <Navbar nav={["Home", "About Us", "Contact Us"]} />
+      <Navbar />
     </div>
   );
 };
