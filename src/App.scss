@@ -1,0 +1,21 @@
+// 1. Variables
+// 2.Normalize css
+// 3.Composable components
+// 4.Sub components
+
+
+
+
+// 1.Variables
+@import "./SCSS/partials/variables/variables";
+
+// 2.Normalize css
+@import './SCSS/partials/normalize';
+
+// 3.Composable components
+
+@import './SCSS/partials/composables/composablecomps';
+
+// 4.Sub components
+
+@import './SCSS/partials/subcomponents/subcomps';

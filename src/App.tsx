@@ -1,14 +1,25 @@
-
 import './App.scss';
 import React from 'react';
-import useFetch from './custom-hooks/useFetch';
-
+import {
+  BrowserRouter as Router, Link, Route, Switch,
+} from 'react-router-dom';
+import Page from './components/pages/Page';
+import PageNotFound from './components/pages/PageNotFound';
 
 function App() {
   return (
     <div className="App">
-
-<h1>Website under Development{console.log(useFetch("https://jsonplaceholder.typicode.com/todos/1"))}</h1>
+      <>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Page} />
+            <Route path='/services' component={Page} />
+            <Route path='/careers'  component={Page} />
+            <Route path='/contact' component={Page} />
+            <Route path="/404" component={PageNotFound} />
+          </Switch>
+        </Router>
+      </>
     </div>
   );
 }
