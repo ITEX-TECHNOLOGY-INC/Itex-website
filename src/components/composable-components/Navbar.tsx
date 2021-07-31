@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 type navProps = {
   nav: Array<any>;
@@ -9,12 +9,12 @@ type navProps = {
 const Navbar = ({ nav = [{"text":"Services","link":"/services"}, {"text":"Careers","link":"/careers"}, {"text":"Contact Us","link":"/contact"}] }: navProps) => {
   return (
     <div className="navbar">
-    <div className="leftnavbar"><Link to='/'>Itex</Link></div>
+    <div className="leftnavbar"><NavLink to='/'>Itex</NavLink></div>
     <div className="rightnavbar">
 <ul>
   {
     nav.map((m)=>{
-return <li><Link to={m.link}>{m.text}</Link></li>
+return <li key={m.text.toString()}><NavLink activeClassName={'active'} to={m.link}>{m.text}</NavLink></li>
     })
   }
 </ul>

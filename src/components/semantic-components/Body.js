@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router'
-import Development from '../pages/Development'
 import Mission from '../sub-components/Home/Mission'
+import Services from "../sub-components/Services/Services";
 
 const Body = () => {
     const location=useLocation()
@@ -9,13 +9,13 @@ const Body = () => {
       <div className="main">
         {location.pathname === "/" && <Mission />}
 
-        {location.pathname === "/services" && <Development />}
+        {location.pathname === "/services" && <Services/> }
 
-        {location.pathname === "/careers" && <Development />}
+        {/*{location.pathname === "/careers"}*/}
 
-        {location.pathname === "/contact" && <Development />}
+        {/*{location.pathname === "/contact"}*/}
       </div>
     );
 }
 
-export default Body
+export default Body;
