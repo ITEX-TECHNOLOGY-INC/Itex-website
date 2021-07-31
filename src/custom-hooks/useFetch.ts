@@ -1,13 +1,14 @@
 
 
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 
 
 const useFetch = (url: string) => {
 
-    const [result, setResult] = useState()
-    const [active, setLoading] = useState<Boolean>(true)
+    const [result, setResult] = useState({})
+    const [loading, setLoading] = useState<Boolean>(true)
+    const [error,setError]=useState<unknown>(false)
 
     useEffect(() => {
 
@@ -17,14 +18,14 @@ const useFetch = (url: string) => {
 
                 const data = await fetch(url)
 
-                const datajson = await data.json()
+                const d = await data.json()
 
-                setResult(datajson)
+                setResult(d)
 
                 setLoading(false)
 
             } catch (error) {
-                setResult(error)
+                setError(error)
             }
 
 
@@ -35,7 +36,7 @@ const useFetch = (url: string) => {
 
     }, [url])
 
-    return [result]
+    return {result,loading,error}
 
 }
 

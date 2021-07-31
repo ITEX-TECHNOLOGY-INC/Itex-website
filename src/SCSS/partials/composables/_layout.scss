@@ -1,0 +1,41 @@
+
+
+//Global styles
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.navbar{
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .rightnavbar ul {
+
+    //Mobile Layout
+
+
+    //Desktop
+    @media screen and (min-width:600px) {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 1rem;
+    }
+  }
+}
+
+//Footer
+
+.footer{
+
+
+  @media screen and (min-width: 600px){
+    display: flex;
+    flex-flow: row nowrap;
+    gap:$gap;
+  }
+}
