@@ -4,3 +4,6 @@
     flex-flow: column nowrap;
     justify-content: space-between;
 }
+.main{
+    margin: 0 .5rem;
+}
