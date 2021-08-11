@@ -1,31 +1,50 @@
-
-
 //Global styles
-li{
+li {
   list-style: none;
 }
-a{
+
+a {
   text-decoration: none;
   color: black;
 }
-.navbar{
 
+.navbar {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
+  box-shadow: 0px -9px 10px 1px black;
 
+  .mobile {
+    svg {
+      font-size: 2rem;
+    }
+
+    @media screen and (min-width: 600px) {
+      display: none;
+    }
+  }
+  .leftnavbar,
+  .rightnavbar {
+    margin: 0 1rem;
+  }
+
+  .leftnavbar a {
+    font-size: 1.5rem;
+  }
 
   .rightnavbar ul {
+    display: none;
 
- li .active{
-  border-bottom: 2px solid blue;
-}
+    li .active {
+      border-bottom: 2px solid $color_primary;
+    }
+
     //Mobile Layout
 
-
     //Desktop
-    @media screen and (min-width:600px) {
+    @media screen and (min-width: 600px) {
       display: flex;
       flex-flow: row nowrap;
       gap: 1rem;
@@ -35,12 +54,14 @@ a{
 
 //Footer
 
-.footer{
+.footer {
+  background-color: $color_footer;
 
-
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 600px) {
     display: flex;
     flex-flow: row nowrap;
-    gap:$gap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: $gap;
   }
 }
