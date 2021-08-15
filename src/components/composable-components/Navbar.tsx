@@ -5,7 +5,9 @@ import { FiMenu } from "react-icons/fi";
 type navProps = {
   nav: Array<any>;
 };
-
+const handleToggle = (e: any) => {
+    document.querySelector('.navbar')!.classList.toggle('mobile')
+}
 
 const Navbar = ({ nav = [{"text":"Services","link":"/services"}, {"text":"Careers","link":"/careers"}, {"text":"Contact Us","link":"/contact"}] }: navProps) => {
   return (
@@ -13,6 +15,11 @@ const Navbar = ({ nav = [{"text":"Services","link":"/services"}, {"text":"Career
       <div className="leftnavbar">
         <NavLink to="/">Itex</NavLink>
       </div>
+        <FiMenu
+            onClick={(e) => {
+                handleToggle(e)
+            }}
+        />
       <div className="rightnavbar">
         <ul>
           {nav.map((m) => {
@@ -25,27 +32,6 @@ const Navbar = ({ nav = [{"text":"Services","link":"/services"}, {"text":"Career
             );
           })}
         </ul>
-      </div>
-
-      <div className="rightnavbar mobile">
-        <FiMenu
-          onClick={() => {
-            console.log("Clciked");
-          }}
-        />
-        <div className="responsive">
-          <ul>
-            {nav.map((m) => {
-              return (
-                <li key={m.text.toString()}>
-                  <NavLink activeClassName={"active"} to={m.link}>
-                    {m.text}
-                  </NavLink>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
       </div>
     </div>
   );

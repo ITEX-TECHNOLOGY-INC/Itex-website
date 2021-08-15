@@ -4,6 +4,7 @@ import Mission from '../sub-components/Home/Mission'
 import Services from "../sub-components/Services/Services";
 import Careers from "../sub-components/Careers/Careers";
 import Contact from "../sub-components/Contactus/Contact";
+import Map from "../sub-components/Contactus/Map";
 
 const Body = () => {
     const location = useLocation()
@@ -16,7 +17,7 @@ const Body = () => {
 
                 {location.pathname === "/careers" && <Careers/>}
 
-                {location.pathname === '/contact' && <Contact/>}
+                {location.pathname === '/contact' && (<><Contact/> <Map/></>)}
             </div>
         </>
     )

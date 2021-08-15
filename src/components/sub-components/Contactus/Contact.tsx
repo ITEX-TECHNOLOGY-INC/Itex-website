@@ -1,11 +1,32 @@
 import React from 'react';
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
 
-    const handleform = (e:any) => {
+    const sendmail = (data: any, e: any) => {
+
+        emailjs.sendForm('service_h3wdttz', 'template_30hcebi', e.target, 'user_FgcQTuahkGIXucJwpp0Ym')
+            .then((result) => {
+                alert("Email sent successfully")
+                e.target.reset()
+            }, (error) => {
+                console.log(error);
+
+            });
+
+
+    }
+
+    const handleform = (e: any) => {
 
         e.preventDefault()
-        console.log(e.target[0].value)
+        const d = {
+            'subject': e.target[0].value,
+            'name': e.target[1].value,
+            'email': e.target[2].value,
+            'feedback': e.target[3].value
+        }
+        sendmail(d, e);
     }
     const contactform = [{
         'title': 'Please enter the subject',
@@ -18,13 +39,14 @@ const Contact = () => {
     }]
     return (
         <div className={`contactus`}>
+            <h2>Contact us</h2>
             <form onSubmit={(e) => {
-               handleform(e)
+                handleform(e)
             }}>
                 {
                     contactform.map((m: { title: string, type: string, nameinput: string }) => {
                         return (
-                            <input key={m.title} type={m.type} placeholder={m.title} name={m.nameinput}/>
+                            <input key={m.title} type={m.type} placeholder={m.title} name={m.nameinput} required/>
                         )
                     })
                 }
