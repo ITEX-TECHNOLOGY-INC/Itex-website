@@ -1,9 +1,13 @@
 
+.map {
+  display: grid;
+  grid-template-columns: 1fr;
 
-.map{
-  max-width: 85%;
-  margin: 1rem auto 1rem auto;
-  iframe{
-  width:100%;
+  iframe {
+    justify-self: center;
+    border: none;
+    margin: 1.5rem;
   }
 }
+
+

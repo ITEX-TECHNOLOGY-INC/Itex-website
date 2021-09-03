@@ -15,6 +15,7 @@ function App() {
               <Route path='/services' component={Page}/>
               <Route path='/careers' component={Page}/>
               <Route path='/contact' component={Page}/>
+                <Route path={'/apply'} component={Page}></Route>
               <Route path="/404" component={PageNotFound}/>
             </Switch>
           </Router>

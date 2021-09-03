@@ -1,0 +1,53 @@
+
+
+//
+.details {
+  .responsibilities, .requirements {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+
+    ul {
+      margin: 0;
+
+      li {
+        padding: .5rem;
+        list-style: decimal;
+      }
+    }
+  }
+
+  .activeSvg {
+    color: $color_primary;
+    border-color: $color_primary;
+  }
+
+  .requirespan, .responsespan {
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 1rem;
+      margin-left: 10px;
+      border: 1px solid;
+      padding: 2px;
+      border-radius: 50%;
+      transition: all .5s;
+    }
+  }
+
+  .apply{
+    button{
+      appearance: none;
+      border: 1px solid $color_primary;
+      padding: .5rem;
+      background-color: $color_primary;
+      color: white;
+    }
+  }
+
+
+}
+//
+
+

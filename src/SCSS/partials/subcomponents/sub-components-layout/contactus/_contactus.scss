@@ -12,10 +12,10 @@ input{
 }
 
  textarea{
-   outline: initial;
-   &:hover,&:active{
-     outline: none;
-     border-color:$color_primary
+
+   &:focus-visible,&:hover{
+     border-color: transparent;
+     outline: 2px solid $color_primary;
    }
  }
 
