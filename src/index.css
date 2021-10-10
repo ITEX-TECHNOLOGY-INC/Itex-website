@@ -1,9 +1,25 @@
-.App{
-    min-height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+   background-color:#0b0c10
 }
-.main{
-    margin: 0 .5rem;
+.main {
+  margin: 0 0.5rem;
+  max-width: 80%;
+  margin: auto;
+ color: white;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: white;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: white;
 }
