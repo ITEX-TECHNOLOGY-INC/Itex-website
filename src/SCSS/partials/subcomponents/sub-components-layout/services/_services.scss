@@ -1,0 +1,8 @@
+.services{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  h2,p{
+    grid-column: 1/-1;
+    justify-self: flex-start;
+  }
+}

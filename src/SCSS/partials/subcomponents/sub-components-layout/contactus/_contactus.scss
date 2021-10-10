@@ -1,39 +1,46 @@
-
-form{
+form {
   display: grid;
-  gap: .5rem;
-  grid-template-columns: repeat(2,1fr);
-input{
-  height: $input_height;
-  &:hover,&:active{
-    outline: none;
-  border: 2px solid $color_primary;
-}
-}
-
- textarea{
-
-   &:focus-visible,&:hover{
-     border-color: transparent;
-     outline: 2px solid $color_primary;
-   }
- }
-
-input:nth-of-type(1){
-grid-column: 1/-1;
-}
-  input:nth-of-type(2){
-  grid-column: 1/2;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  input {
+    height: $input_height;
+    border-radius: 6px;
+    border-width: 2px;
+    background-color: white;
+    background-color: $color_background;
+    &:hover,
+    &:active {
+      outline: none;
+      border: 2px solid $color_primary;
+    }
   }
-  input:nth-of-type(3){
-grid-column: 2/3;
+
+  textarea {
+    background-color: $color_background;
+    border-radius: 6px;
+    &:focus-visible,
+    &:hover {
+      border-color: transparent;
+      outline: 2px solid $color_primary;
+    }
   }
-textarea{
-  grid-column: 1/-1;
-}
- input[type='submit']{
-   grid-column: 1/-1;
-   justify-self: center;
-   width: 20%;
- }
+
+  input:nth-of-type(1) {
+    grid-column: 1/-1;
+  }
+  input:nth-of-type(2) {
+    grid-column: 1/2;
+  }
+  input:nth-of-type(3) {
+    grid-column: 2/3;
+  }
+  textarea {
+    grid-column: 1/-1;
+  }
+  input[type="submit"] {
+    grid-column: 1/-1;
+    justify-self: center;
+    width: 20%;
+    background-color: white !important;
+  }
 }

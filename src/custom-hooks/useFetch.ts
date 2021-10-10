@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 
 
-const useFetch = (url: string) => {
+const useFetch = (url: string,{}) => {
 
     const [result, setResult] = useState({})
     const [loading, setLoading] = useState<Boolean>(true)

@@ -2,6 +2,7 @@
 
 //
 .details {
+  line-height: 1.5;
   .responsibilities, .requirements {
     max-height: 0;
     overflow: hidden;
@@ -41,8 +42,8 @@
       appearance: none;
       border: 1px solid $color_primary;
       padding: .5rem;
-      background-color: $color_primary;
-      color: white;
+      background-color: white;
+      border-radius: 6px;
     }
   }
 

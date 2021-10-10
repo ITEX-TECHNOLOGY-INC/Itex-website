@@ -2,10 +2,10 @@
 
 import React from 'react'
 
-const Button = ({type:string,text:string}) => {
+const Button = ({type:String,text:string}) => {
     return (
         <div className="button">
-            
+
         </div>
     )
 }
