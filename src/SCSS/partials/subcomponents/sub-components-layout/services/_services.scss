@@ -1,8 +1,24 @@
-.services{
+.services {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  h2,p{
+  grid-template-columns: repeat(2, 1fr);
+  h2,
+  p {
     grid-column: 1/-1;
     justify-self: flex-start;
+  }
+  .service{
+    grid-column: 1/-1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    img{
+      width:50%
+    }
+  }
+  .service:nth-of-type(odd) {
+   img{
+     order: -1;
+   }
   }
 }
